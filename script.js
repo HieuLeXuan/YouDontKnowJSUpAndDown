@@ -1,3 +1,6 @@
+// strict mode
+// 'use strict';
+
 // 5 falsy values: 0, '', undefined, null, NaN
 
 // switch statement
@@ -65,8 +68,7 @@ console.log(calculateTip(430));
 console.log(calculateTip2(430));*/
 
 //TODO: FUNDAMENTALS UNIT
-/* strict mode
-"use strict";
+/*
 
 let hasDriversLicense = false;
 const passTest = true;
@@ -383,3 +385,401 @@ const printForecast = arr => {
 };
 
 console.log(printForecast(temperatures1));*/
+
+// TODO: Destructuring arrays
+
+// const arr = [1, 2, 3];
+// const [a, , c] = arr;
+// console.log(a, c);
+
+// const [a, b, c] = [1, 2, 3, 4, 5];
+// console.log(a, b, c);
+
+// const arr = [1, 2, 3];
+// const [a, b, ...c] = [1, 2, 3, 4, 5];
+// console.log(a, b, c);
+
+// TODO: Rest paramater
+// console.log(...arr);
+
+// TODO: Variable assignment
+// const res = [1, 2, 3, 4]; // rest.response();
+// const [a, b, c] = res;
+// console.log(a, b, c);
+
+// TODO: Swapping
+// let a = 1;
+// let b = 2;
+// [a, b] = [b, a];
+// console.log(a, b);
+
+// TODO: Ignoring values
+// const res = () => [1, 2, 3];
+// const [a, , b] = res();
+// console.log(a, b);
+
+// TODO: Assignment to new variables
+// const res = { blog: 'blog1', type: 'type1' };
+// const { blog: newBlog, type: newType } = res;
+// console.log(newBlog, newType);
+
+// TODO: Nested object and destructuring
+// const blogs = {
+//   anonystick: [
+//     {
+//       pageFacebook: 'Tip javascript Viet Nam',
+//       likes: 1234,
+//       daily: 1323,
+//     },
+//     {
+//       pageFacebook: 'Tip javascript Viet Nam 1',
+//       likes: 1234,
+//       daily: 1323,
+//     },
+//     {
+//       pageFacebook: 'Tip javascript Viet Nam 2',
+//       likes: 1234,
+//       daily: 1323,
+//     },
+//   ],
+// };
+
+// // console.log(blogs.anonystick[0].pageFacebook);
+// // console.log(blogs.anonystick[0].likes);
+// // console.log(blogs.anonystick[0].daily);
+
+// const {
+//   anonystick: [{ pageFacebook: namePage, likes: numLikes, daily: numDaily }],
+// } = blogs;
+
+// const { anonystick: newAnonystick } = blogs;
+
+// const {
+//   anonystick: [, , object3],
+// } = blogs;
+
+// console.log(namePage, numLikes, numDaily);
+// console.log(newAnonystick);
+
+// console.log(object3);
+
+// TODO: Spead and rest paramater
+
+// const arr = [1, 2, ...[3, 4]];
+// console.log(arr);
+
+// const [a, b, ...c] = [1, 2, 3, 4, 5, 6];
+// console.log(a, b, c);
+
+// const add = function (...numbers) {
+//   console.log(...numbers);
+// };
+// add(1);
+// add(1, 2);
+// add(1, 2, 3);
+
+// TODO: Coding Challenge
+/*
+We're building a football betting app (soccer for my American friends 😅)!
+Suppose we get data from a web service about a certain game (below).
+In this challenge we're gonna work with the data. So here are your tasks:
+
+1. Create one player array for each team (variables 'players1' 
+and 'players2')
+2. The first player in any player array is the goalkeeper and 
+the others are field players. For Bayern Munich (team 1) create 
+one variable ('gk') with the goalkeeper's name, and one array 
+('fieldPlayers') with all the remaining 10 field players
+3. Create an array 'allPlayers' containing all players of both teams 
+(22 players)
+4. During the game, Bayern Munich (team 1) used 3 substitute players. 
+So create a new array ('players1Final') containing all the original 
+team1 players plus 'Thiago', 'Coutinho' and 'Perisic'
+5. Based on the game.odds object, create one variable for each odd 
+(called 'team1', 'draw' and 'team2')
+6. Write a function ('printGoals') that receives an arbitrary 
+number of player names (NOT an array) and prints each of them 
+to the console, along with the number of goals that were scored 
+in total (number of player names passed in)
+7. The team with the lower odd is more likely to win. 
+Print to the console which team is more likely to win, WITHOUT using 
+an if/else statement or the ternary operator.
+TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' 
+and 'Kimmich'. Then, call the function again with players from game.scored
+*/
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
+
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
+
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log(players1Final);
+
+// const {
+//   odds: { team1: team1, x: draw, team2: team2 },
+// } = game;
+
+// printGoals(...players) {
+//   console.log(players);
+//   console.log(`${players.length} goals were scored`);
+// };
+
+// printGoals(...game.scored);
+
+// team1 < team2 && console.log('Team 1 is more likely to win');
+// team1 > team2 && console.log('Team 2 is more likely to win');
+
+// TODO: Section 9: Data structures, Modern Operators and String
+// TODO: 103. Destructuring Arrays
+// strict mode
+'use strict';
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+// };
+
+// const arr = [2, 3, 4];
+
+// khai bao bien moi
+// const [x, y, z] = arr;
+// console.log(x, y, z, arr);
+// const [first, second] = restaurant.categories;
+// console.log(first, second);
+
+// loai bo phan tu khong mong muon trong mang
+// let [main, , secondary] = restaurant.categories;
+// console.log(main, secondary);
+
+// Switching variables
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
+
+// Receive 2 return values from a function
+// const [starter, mainCourse] = restaurant.order(2, 0);
+// console.log('starter, mainCourse: ', starter, mainCourse);
+
+// Nested destructuring
+// const nested = [2, 4, [5, 6]];
+// const [i, , j] = nested;
+// console.log(i, j);
+
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
+
+// Default values
+// const [p, q, r = 1] = [8, 9];
+// console.log(p, q, r);
+
+// TODO: Destructuring Object
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  // ES6 enhanced object literals
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+// Default values
+// const { menu = [], starterMenu = [] } = restaurant;
+// console.log(menu, starterMenu);
+
+// TODO: Coding Challenge #2
+
+/* 
+Let's continue with our football betting app!
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+GOOD LUCK 😀
+*/
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// 1.
+// console.log(game.scored.entries());
+// for (const [i, player] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${player}`);
+// }
+
+// 2.
+// const odds = Object.values(game.odds);
+// console.log(odds);
+// let average = 0;
+// for (const odd of odds) {
+//   average += odd;
+// }
+
+// average /= odds.length;
+// console.log(average);
+
+// 3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
+
+// BONUS
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+// }
+// console.log(scorers);
+
+// TODO: Maps: Iteration
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try again!'],
+]);
+// console.log(question);
+
+// Convert object to map
+// console.log(Object.entries(restaurant.openingHours));
+// const hourMap = new Map(Object.entries(restaurant.openingHours));
+// console.log(hourMap);
+
+// Quiz app
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+// const answer = Number(prompt('Your answer'));
+// console.log(answer);
+
+// console.log(question.get('correct') === answer);
+
+// Convert mapp to array
+console.log([...question]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
