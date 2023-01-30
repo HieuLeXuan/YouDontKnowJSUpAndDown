@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      body {
+        background: hsl(212, 45%, 89%);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+
+      .cards {
+        height: 550px;
+        width: 350px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      .cards__img {
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .cards__heading h1 {
+        font-size: 25px;
+        font-weight: 700px;
+        text-align: center;
+        padding: 20px 0;
+        line-height: 30px;
+      }
+
+      .cards__heading p {
+        color: gray;
+        font-weight: 300;
+        width: 90%;
+        margin: auto;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cards">
+        <!-- image -->
+        <div class="cards__img">
+          <img src="./images/image-qr-code.png" alt="qr code" />
+        </div>
+        <!-- heading -->
+        <div class="cards__heading">
+          <h1>Improve your front-end skills by building projects</h1>
+          <p>
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level Frontend Mentor and take your coding skills
+            to the next level
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">HieuLe</a>.
+    </div>
+  </body>
+</html>
