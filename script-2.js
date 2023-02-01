@@ -5,7 +5,7 @@
 // array.slice(from, until); (thuc chat cat tu from toi until - 1)
 
 // co the them hoac xoa doi tuong trong mang
-// cos the thay doi truc tiep tren doi tuong goi den no
+// co the thay doi truc tiep tren doi tuong goi den no
 // array.splice(index, number or element)
 
 // split -> lam viec voi chuoi string thanh cac substring
